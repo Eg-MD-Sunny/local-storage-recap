@@ -1,11 +1,12 @@
 import React from 'react';
-import { addDB } from '../Utilities/Utilities,js';
+import { addToDb } from '../Utilities/fakeDB';
 import './Product.css';
 
 const Product = (props) => {
     const {id,name,price}=props.sendingProductData;
     const addToClick = (id) =>{
-        addDB(id);
+        // console.log('Product Added',id)
+        addToDb(id);
     }
     return (
         <div className="product-style">

@@ -1,8 +1,0 @@
-const addDB = (id)=>{
-    localStorage.setItem(id,1)
-}
-
-
-
-export { addDB };
-

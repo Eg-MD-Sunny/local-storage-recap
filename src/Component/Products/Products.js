@@ -14,7 +14,7 @@ const Products = () => {
             <h1>Product Loaded: {products.length}</h1>
             <div className="product-container">
                 {
-                    products.map(product=><Product sendingProductData={product}></Product>)
+                    products.map(product=><Product sendingProductData={product} key={product.id}></Product>)
                 }
             </div>
         </div>
