@@ -1,8 +1,10 @@
 const addToDb = (id) =>{
-    const quantity = localStorage.getItem(id)
-    if(quantity){
-        const newQty = parseInt(quantity) + 1;
-        localStorage.setItem(id,newQty)
+    const matchDataId = localStorage.getItem(id)
+    //console.log('Geeting Data Type', typeof matchDataId);
+    if(matchDataId){
+        const newValueSet= matchDataId + 1;
+    //console.log('Increase Data Type', typeof newValueSet);
+        localStorage.setItem(id,newValueSet);
     }else{
         localStorage.setItem(id,1)
     }
