@@ -6,7 +6,7 @@ const Product = (props) => {
     const {id,name,price}=props.sendingProductData;
     const addToClick = (id) =>{
         // console.log('Product Added',id)
-        addToDb(id);
+        addToDb(id)
     }
     return (
         <div className="product-style">
