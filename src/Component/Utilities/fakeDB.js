@@ -2,6 +2,7 @@ const addToDb = (id) =>{
     let shoppingCart ={}
     console.log(typeof shoppingCart)
     
+    
     //Local Storage Get & Check Data
     const storedCard = localStorage.getItem('data-store')
     console.log(typeof storedCard);
