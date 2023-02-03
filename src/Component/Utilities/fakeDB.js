@@ -1,12 +1,25 @@
 const addToDb = (id) =>{
     let shoppingCart ={}
     console.log(typeof shoppingCart)
-    localStorage.setItem('data-store',JSON.stringify(shoppingCart))
-
-    let matchDataId = shoppingCart[id]
     
+    //Local Storage Get & Check Data
+    const storedCard = localStorage.getItem('data-store')
+    if(storedCard){
+        shoppingCart=JSON.parse(storedCard)
+    }else{
+        shoppingCart ={}
+    }
 
 
+    // Local Storage Set Data
+    let matchDataId = shoppingCart[id]
+    if(matchDataId){
+        const newValueSet = matchDataId + 1;
+        shoppingCart[id]=newValueSet;
+    }else{
+        shoppingCart[id] = 1;
+    }
+    localStorage.setItem('data-store',JSON.stringify(shoppingCart))
 
 
 
