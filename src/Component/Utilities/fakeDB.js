@@ -4,12 +4,13 @@ const addToDb = (id) =>{
     
     //Local Storage Get & Check Data
     const storedCard = localStorage.getItem('data-store')
+    console.log(typeof storedCard);
     if(storedCard){
         shoppingCart=JSON.parse(storedCard)
+        //console.log(typeof shoppingCart)
     }else{
         shoppingCart ={}
     }
-
 
     // Local Storage Set Data
     let matchDataId = shoppingCart[id]
@@ -35,5 +36,5 @@ const addToDb = (id) =>{
     // }
 }
 
-export { addToDb }
+export { addToDb };
 
