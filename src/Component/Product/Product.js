@@ -1,5 +1,5 @@
 import React from 'react';
-import { addToDb } from '../Utilities/fakeDB';
+import { addToDb, removeFromDb } from '../Utilities/fakeDB';
 import './Product.css';
 
 const Product = (props) => {
@@ -11,7 +11,8 @@ const Product = (props) => {
     }
 
     const removeFromCart = (id) =>{
-        console.log('Reveing', id)
+        // console.log('Removeing', id)
+        removeFromDb(id)
     }
     return (
         <div className="product-style">

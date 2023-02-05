@@ -2,7 +2,7 @@ const addToDb = (id) =>{
     let shoppingCart ={}
     console.log(typeof shoppingCart)
     
-    
+
     //Local Storage Get & Check Data
     const storedCard = localStorage.getItem('data-store')
     console.log(typeof storedCard);
@@ -24,7 +24,7 @@ const addToDb = (id) =>{
     localStorage.setItem('data-store',JSON.stringify(shoppingCart))
 
 
-
+   
 
     // const matchDataId = localStorage.getItem(id)
     // //console.log('Geeting Data Type', typeof matchDataId);
@@ -36,6 +36,8 @@ const addToDb = (id) =>{
     //     //localStorage.setItem(id,1)
     // }
 }
-
-export { addToDb };
+const removeFromDb = (id) =>{
+    console.log('Inside Fake DB',id)
+}
+export { addToDb, removeFromDb };
 
